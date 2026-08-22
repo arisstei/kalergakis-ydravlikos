@@ -203,9 +203,10 @@
 </div>
 
 <!-- ΜΕΤΡΗΤΗΣ ΕΠΙΣΚΕΨΕΩΝ -->
-<div id="visit-counter" class="fixed bottom-3 right-3 z-40 flex items-center gap-1.5 bg-white/90 backdrop-blur border border-gray-200 text-gray-500 text-xs px-3 py-1.5 rounded-full shadow-sm">
-  <i data-lucide="eye" class="w-3.5 h-3.5"></i>
-  <span id="visit-count">…</span>
+<div id="visit-counter" class="fixed bottom-3 right-3 z-40 rounded-full overflow-hidden shadow-sm opacity-90">
+  <img src="https://hits.sh/ydrokalergakis.gr.svg?style=flat-square&label=%CE%B5%CF%80%CE%B9%CF%83%CE%BA%CE%AD%CF%88%CE%B5%CE%B9%CF%82&color=1d4ed8"
+       alt="Μετρητής επισκέψεων" height="20"
+       onerror="this.closest('#visit-counter').style.display='none'">
 </div>
 
 <!-- FOOTER -->
@@ -270,20 +271,6 @@
 <script>
   lucide.createIcons();
   document.getElementById('current-year').textContent = new Date().getFullYear();
-
-  // ===== ΜΕΤΡΗΤΗΣ ΕΠΙΣΚΕΨΕΩΝ =====
-  (function () {
-    var el = document.getElementById('visit-count');
-    if (!el) return;
-    fetch('https://api.countapi.xyz/hit/ydrokalergakis-gr/visits')
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        el.textContent = (data.value || 0).toLocaleString('el-GR') + ' επισκέψεις';
-      })
-      .catch(function () {
-        el.parentElement.style.display = 'none';
-      });
-  })();
 
   // ===== TABS: Φωτό / Video =====
   const tabPhotos = document.getElementById('tab-photos');
