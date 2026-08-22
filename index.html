@@ -226,12 +226,13 @@
 
   </div>
   <div class="text-center text-xs text-gray-500 mt-8">
-    © 2026 Ydrokalergakis.gr. Όλα τα δικαιώματα διατηρούνται.
+    © <span id="current-year">2026</span> Ydrokalergakis.gr. Όλα τα δικαιώματα διατηρούνται. Κατασκευή ιστοσελίδας: <a href="https://quicksite.gr" target="_blank" rel="noopener" class="hover:text-white">quicksite.gr</a>
   </div>
 </footer>
 
 <script>
   lucide.createIcons();
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
 
 </body>
