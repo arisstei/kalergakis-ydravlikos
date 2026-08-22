@@ -109,9 +109,14 @@
 <section class="px-4 py-14 sm:py-20 bg-white">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-2">Οι Δουλειές Μας</h2>
-    <p class="text-center text-gray-500 mb-10">Μια γεύση από πρόσφατα έργα μας στο Ηράκλειο</p>
+    <p class="text-center text-gray-500 mb-8">Μια γεύση από πρόσφατα έργα μας στο Ηράκλειο</p>
 
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4" id="work-gallery">
+    <div class="flex items-center justify-center gap-2 mb-8">
+      <button type="button" id="tab-photos" class="tab-btn px-5 py-2 rounded-full text-sm sm:text-base font-semibold bg-blue-700 text-white transition">Φωτό</button>
+      <button type="button" id="tab-videos" class="tab-btn px-5 py-2 rounded-full text-sm sm:text-base font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition">Video</button>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4" id="photo-grid">
 
       <button type="button" class="gallery-item group relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition aspect-square" data-index="0">
         <img src="images/gallery-solar-1.jpg" alt="Εγκατάσταση ηλιακού θερμοσίφωνα στο Ηράκλειο" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -137,7 +142,19 @@
         <img src="images/gallery-exterior-piping.jpg" alt="Εξωτερική εγκατάσταση σωληνώσεων σε πρόσοψη κτιρίου" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
       </button>
 
-      <button type="button" class="gallery-item group relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition aspect-square bg-gray-900" data-index="6">
+      <button type="button" class="gallery-item group relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition aspect-square" data-index="6">
+        <img src="images/gallery-panasonic-indoor.jpg" alt="Εσωτερική εγκατάσταση αντλίας θερμότητας Panasonic" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      </button>
+
+      <button type="button" class="gallery-item group relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition aspect-square" data-index="7">
+        <img src="images/gallery-domusa.jpg" alt="Τοποθέτηση αντλίας θερμότητας Domusa Teknik" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      </button>
+
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 hidden" id="video-grid">
+
+      <button type="button" class="gallery-item group relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition aspect-square bg-gray-900" data-index="0">
         <img src="https://drive.google.com/thumbnail?id=1WVYXRLjuw8DYSLdYbKBv1Ov6hWeU85vh&sz=w1000" alt="Βίντεο εργασίας 1" class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-300">
         <span class="absolute inset-0 flex items-center justify-center">
           <span class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 flex items-center justify-center shadow-md group-hover:scale-110 transition">
@@ -146,7 +163,7 @@
         </span>
       </button>
 
-      <button type="button" class="gallery-item group relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition aspect-square bg-gray-900" data-index="7">
+      <button type="button" class="gallery-item group relative rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg transition aspect-square bg-gray-900" data-index="1">
         <img src="https://drive.google.com/thumbnail?id=1w-X1JND3uHoUVn2qLoR7NIFpzmXgyxPn&sz=w1000" alt="Βίντεο εργασίας 2" class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition duration-300">
         <span class="absolute inset-0 flex items-center justify-center">
           <span class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/90 flex items-center justify-center shadow-md group-hover:scale-110 transition">
@@ -236,15 +253,46 @@
   lucide.createIcons();
   document.getElementById('current-year').textContent = new Date().getFullYear();
 
+  // ===== TABS: Φωτό / Video =====
+  const tabPhotos = document.getElementById('tab-photos');
+  const tabVideos = document.getElementById('tab-videos');
+  const photoGrid = document.getElementById('photo-grid');
+  const videoGrid = document.getElementById('video-grid');
+  const ACTIVE_TAB = 'px-5 py-2 rounded-full text-sm sm:text-base font-semibold bg-blue-700 text-white transition';
+  const INACTIVE_TAB = 'px-5 py-2 rounded-full text-sm sm:text-base font-semibold bg-gray-100 text-gray-600 hover:bg-gray-200 transition';
+  let activeTab = 'photos';
+
+  function setTab(tab) {
+    activeTab = tab;
+    if (tab === 'photos') {
+      photoGrid.classList.remove('hidden');
+      videoGrid.classList.add('hidden');
+      tabPhotos.className = 'tab-btn ' + ACTIVE_TAB;
+      tabVideos.className = 'tab-btn ' + INACTIVE_TAB;
+    } else {
+      photoGrid.classList.add('hidden');
+      videoGrid.classList.remove('hidden');
+      tabVideos.className = 'tab-btn ' + ACTIVE_TAB;
+      tabPhotos.className = 'tab-btn ' + INACTIVE_TAB;
+    }
+  }
+
+  tabPhotos.addEventListener('click', function () { setTab('photos'); });
+  tabVideos.addEventListener('click', function () { setTab('videos'); });
+
   // ===== GALLERY / LIGHTBOX =====
-  // Κάθε αντικείμενο: { type: 'image', src } ή { type: 'video', src: '<embed URL YouTube/Vimeo>' }
-  const GALLERY_ITEMS = [
+  const PHOTO_ITEMS = [
     { type: 'image', src: 'images/gallery-solar-1.jpg', alt: 'Εγκατάσταση ηλιακού θερμοσίφωνα στο Ηράκλειο' },
     { type: 'image', src: 'images/gallery-thermosifon-tank.jpg', alt: 'Υδραυλική σύνδεση δοχείου θέρμανσης νερού' },
     { type: 'image', src: 'images/gallery-manifold.jpg', alt: 'Ολοκληρωμένη εγκατάσταση ηλιακού θερμοσίφωνα με θέα στη θάλασσα' },
     { type: 'image', src: 'images/gallery-ac-unit.jpg', alt: 'Τοποθέτηση εξωτερικής μονάδας αντλίας θερμότητας' },
     { type: 'image', src: 'images/gallery-heatpump.jpg', alt: 'Εγκατάσταση μονάδας αντλίας θερμότητας' },
     { type: 'image', src: 'images/gallery-exterior-piping.jpg', alt: 'Εξωτερική εγκατάσταση σωληνώσεων σε πρόσοψη κτιρίου' },
+    { type: 'image', src: 'images/gallery-panasonic-indoor.jpg', alt: 'Εσωτερική εγκατάσταση αντλίας θερμότητας Panasonic' },
+    { type: 'image', src: 'images/gallery-domusa.jpg', alt: 'Τοποθέτηση αντλίας θερμότητας Domusa Teknik' }
+  ];
+
+  const VIDEO_ITEMS = [
     { type: 'video', src: 'https://drive.google.com/file/d/1WVYXRLjuw8DYSLdYbKBv1Ov6hWeU85vh/preview' },
     { type: 'video', src: 'https://drive.google.com/file/d/1w-X1JND3uHoUVn2qLoR7NIFpzmXgyxPn/preview' }
   ];
@@ -253,8 +301,12 @@
   const lightboxContent = document.getElementById('lightbox-content');
   let currentIndex = 0;
 
+  function activeItems() {
+    return activeTab === 'photos' ? PHOTO_ITEMS : VIDEO_ITEMS;
+  }
+
   function renderLightboxItem(index) {
-    const item = GALLERY_ITEMS[index];
+    const item = activeItems()[index];
     lightboxContent.innerHTML = '';
     if (item.type === 'video') {
       const wrap = document.createElement('div');
@@ -286,7 +338,8 @@
   }
 
   function showNext(delta) {
-    currentIndex = (currentIndex + delta + GALLERY_ITEMS.length) % GALLERY_ITEMS.length;
+    const items = activeItems();
+    currentIndex = (currentIndex + delta + items.length) % items.length;
     renderLightboxItem(currentIndex);
   }
 
