@@ -1,0 +1,9 @@
+# Αρχεία που δεν πρέπει να δημοσιεύονται στο site
+.assetsignore
+wrangler.jsonc
+README.md
+input.css
+tailwind.config.js
+.gitignore
+.git
+node_modules
