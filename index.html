@@ -45,17 +45,24 @@
   body { font-family: 'Segoe UI', system-ui, sans-serif; }
 </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-white text-gray-800 pb-20 md:pb-0">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-    <div class="flex items-center gap-2">
-      <img src="images/logo.png" alt="Ydrokalergakis.gr λογότυπο" class="w-10 h-10 sm:w-12 sm:h-12 object-contain">
-      <span class="text-lg sm:text-xl font-bold text-gray-900">Ydrokalergakis.gr</span>
-    </div>
-    <a href="tel:+306951089108" class="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 active:scale-95 transition text-white font-bold px-3 py-2 sm:px-5 sm:py-3 rounded-full text-sm sm:text-base shadow-md whitespace-nowrap">
-      📞 <span class="hidden sm:inline">Κλήση Τώρα:</span> 6951 089 108
+<header class="sticky top-0 z-50 border-b border-gray-200/70 bg-white/80 backdrop-blur-xl">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <a href="/" class="flex items-center gap-2.5">
+      <img src="/images/logo.png" alt="Ydrokalergakis.gr λογότυπο" class="w-10 h-10 sm:w-11 sm:h-11 object-contain">
+      <span class="text-lg sm:text-xl font-extrabold tracking-tight text-gray-900">Ydrokalergakis<span class="text-blue-700">.gr</span></span>
+    </a>
+    <nav aria-label="Υπηρεσίες" class="hidden lg:flex items-center gap-1 text-sm font-medium text-gray-600">
+      <a href="/apofraxeis-irakleio/" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-gray-900 transition">Αποφράξεις</a>
+      <a href="/diarroes-irakleio/" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-gray-900 transition">Διαρροές</a>
+      <a href="/iliakos-thermosifonas-irakleio/" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-gray-900 transition">Ηλιακοί θερμοσίφωνες</a>
+      <a href="/antlia-thermotitas-irakleio/" class="px-3 py-2 rounded-full hover:bg-gray-100 hover:text-gray-900 transition">Αντλίες θερμότητας</a>
+    </nav>
+    <a href="tel:+306951089108" class="group inline-flex items-center gap-2 rounded-full bg-blue-700 hover:bg-blue-800 active:scale-95 transition text-white font-bold px-4 py-2.5 sm:px-5 text-sm sm:text-base shadow-lg shadow-blue-700/25 whitespace-nowrap">
+      <span class="relative flex h-2.5 w-2.5"><span class="absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75 motion-safe:animate-ping"></span><span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-400"></span></span>
+      <span class="hidden sm:inline">24/7</span> 6951 089 108
     </a>
   </div>
 </header>
@@ -104,29 +111,29 @@
         <p class="text-sm text-gray-500">Πλήρης μελέτη και υλοποίηση για νέες εγκαταστάσεις ή ανακαίνιση μπάνιου / κουζίνας.</p>
       </div>
 
-      <div class="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg hover:border-blue-200 transition">
+      <a href="/apofraxeis-irakleio/" class="block border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg hover:border-blue-200 transition">
         <div class="bg-blue-100 text-blue-700 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg aria-hidden="true" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /> <path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /> <path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" /> </svg>
         </div>
         <h3 class="font-bold text-gray-900 mb-2">Αποφράξεις &amp; Καθαρισμός Αποχετεύσεων</h3>
         <p class="text-sm text-gray-500">Άμεσο ξεβούλωμα αγωγών και αποχετεύσεων με σύγχρονο εξοπλισμό.</p>
-      </div>
+      </a>
 
-      <div class="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg hover:border-blue-200 transition">
+      <a href="/iliakos-thermosifonas-irakleio/" class="block border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg hover:border-blue-200 transition">
         <div class="bg-blue-100 text-blue-700 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg aria-hidden="true" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /> </svg>
         </div>
         <h3 class="font-bold text-gray-900 mb-2">Τοποθέτηση &amp; Service Θερμοσιφώνων / Ηλιακών</h3>
         <p class="text-sm text-gray-500">Εγκατάσταση, συντήρηση και επισκευή θερμοσιφώνων και ηλιακών συστημάτων.</p>
-      </div>
+      </a>
 
-      <div class="border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg hover:border-blue-200 transition">
+      <a href="/antlia-thermotitas-irakleio/" class="block border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg hover:border-blue-200 transition">
         <div class="bg-blue-100 text-blue-700 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg aria-hidden="true" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z" /> <path d="M12 12v.01" /> </svg>
         </div>
         <h3 class="font-bold text-gray-900 mb-2">Τοποθέτηση &amp; Service Αντλιών Θερμότητας</h3>
         <p class="text-sm text-gray-500">Εγκατάσταση, συντήρηση και χημικός καθαρισμός στην κεντρική θέρμανση.</p>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -139,7 +146,7 @@
     <div class="space-y-6 text-gray-700 leading-relaxed">
       <div>
         <h3 class="text-lg font-bold text-gray-900 mb-1">Αποφράξεις και διαρροές</h3>
-        <p>Βούλωσε ο νεροχύτης, η λεκάνη ή ο κεντρικός αγωγός; Κάνουμε απόφραξη με κατάλληλο εξοπλισμό και καθαρισμό αποχετεύσεων. Αν υπάρχει υγρασία ή άγνωστη κατανάλωση νερού, εντοπίζουμε τη διαρροή και την επισκευάζουμε.</p>
+        <p>Βούλωσε ο νεροχύτης, η λεκάνη ή ο κεντρικός αγωγός; Κάνουμε <a href="/apofraxeis-irakleio/" class="text-blue-700 font-semibold underline">απόφραξη</a> με κατάλληλο εξοπλισμό και καθαρισμό αποχετεύσεων. Αν υπάρχει υγρασία ή άγνωστη κατανάλωση νερού, <a href="/diarroes-irakleio/" class="text-blue-700 font-semibold underline">εντοπίζουμε τη διαρροή</a> και την επισκευάζουμε.</p>
       </div>
       <div>
         <h3 class="text-lg font-bold text-gray-900 mb-1">Ηλιακοί και ηλεκτρικοί θερμοσίφωνες</h3>
@@ -294,70 +301,57 @@
 </div>
 
 <!-- ΜΕΤΡΗΤΗΣ ΕΠΙΣΚΕΨΕΩΝ -->
-<div id="visit-counter" class="fixed bottom-3 right-3 z-40 rounded-full overflow-hidden shadow-sm opacity-90">
+<div id="visit-counter" class="fixed bottom-20 md:bottom-3 right-3 z-40 rounded-full overflow-hidden shadow-sm opacity-90">
   <img src="https://hits.sh/ydrokalergakis.gr.svg?style=flat-square&label=%CE%B5%CF%80%CE%B9%CF%83%CE%BA%CE%AD%CF%88%CE%B5%CE%B9%CF%82&color=1d4ed8"
        alt="Μετρητής επισκέψεων" height="20"
        onerror="this.closest('#visit-counter').style.display='none'">
 </div>
 
 <!-- FOOTER -->
-<footer class="bg-gray-900 text-gray-300 px-4 py-10">
-  <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left">
-
+<footer class="bg-gray-950 text-gray-300 px-4 pt-14 pb-24 md:pb-10">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
     <div>
-      <div class="flex items-center justify-center sm:justify-start gap-2 mb-3">
-        <img src="images/logo.png" alt="Ydrokalergakis.gr λογότυπο" class="w-9 h-9 object-contain">
-        <h3 class="text-white font-bold">Ydrokalergakis.gr</h3>
+      <div class="flex items-center gap-2.5 mb-4">
+        <img src="/images/logo.png" alt="Ydrokalergakis.gr λογότυπο" class="w-10 h-10 object-contain">
+        <span class="text-white font-extrabold text-lg">Ydrokalergakis.gr</span>
       </div>
-      <p class="text-sm text-gray-400">Επαγγελματίας Υδραυλικός με άμεση εξυπηρέτηση σε όλο το Ηράκλειο Κρήτης.</p>
+      <p class="text-sm text-gray-400 leading-relaxed">Επαγγελματίας υδραυλικός με άμεση εξυπηρέτηση σε όλο το Ηράκλειο Κρήτης.</p>
     </div>
-
+    <div>
+      <h3 class="text-white font-bold mb-4">Υπηρεσίες</h3>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="/apofraxeis-irakleio/" class="hover:text-white transition">Αποφράξεις</a></li>
+        <li><a href="/diarroes-irakleio/" class="hover:text-white transition">Διαρροές</a></li>
+        <li><a href="/iliakos-thermosifonas-irakleio/" class="hover:text-white transition">Ηλιακοί θερμοσίφωνες</a></li>
+        <li><a href="/antlia-thermotitas-irakleio/" class="hover:text-white transition">Αντλίες θερμότητας</a></li>
+      </ul>
+    </div>
     <div>
       <h3 class="text-white font-bold mb-4">Επικοινωνία</h3>
-
-      <div class="flex items-center justify-center sm:justify-start gap-3 mb-4">
-        <a href="tel:+306951089108" aria-label="Κλήση" title="Κλήση: 6951 089 108"
-           class="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-500 text-white flex items-center justify-center transition shadow-md hover:-translate-y-0.5">
-          <svg aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /> </svg>
-        </a>
-        <a href="mailto:ydrokalergakis@gmail.com" aria-label="Email" title="ydrokalergakis@gmail.com"
-           class="w-10 h-10 rounded-full bg-gradient-to-br from-red-500 to-orange-400 hover:opacity-90 text-white flex items-center justify-center transition shadow-md hover:-translate-y-0.5">
-          <svg aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /> </svg>
-        </a>
-        <a href="https://instagram.com/ydro_kalergakis" target="_blank" rel="noopener" aria-label="Instagram" title="@ydro_kalergakis"
-           class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:opacity-90 text-white flex items-center justify-center transition shadow-md hover:-translate-y-0.5">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
-        </a>
-      </div>
-
-      <p class="text-sm mb-1">
-        <a href="tel:+306951089108" class="hover:text-white">6951 089 108</a>
-      </p>
-      <p class="text-sm mb-1">
-        <a href="mailto:ydrokalergakis@gmail.com" class="hover:text-white">ydrokalergakis@gmail.com</a>
-      </p>
-      <p class="text-sm mb-3">
-        <a href="https://instagram.com/ydro_kalergakis" target="_blank" rel="noopener" class="hover:text-white">@ydro_kalergakis</a>
-      </p>
-      <p class="text-sm flex items-center justify-center sm:justify-start gap-2">
-        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /> </svg>
-        Ηράκλειο, Κρήτη
-      </p>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="tel:+306951089108" class="inline-flex items-center gap-2 hover:text-white transition"><svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 6951 089 108</a></li>
+        <li><a href="mailto:ydrokalergakis@gmail.com" class="inline-flex items-center gap-2 hover:text-white transition"><svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> ydrokalergakis@gmail.com</a></li>
+        <li><a href="https://instagram.com/ydro_kalergakis" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-white transition">@ydro_kalergakis</a></li>
+        <li class="inline-flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Ηράκλειο, Κρήτη</li>
+      </ul>
     </div>
-
     <div>
-      <h3 class="text-white font-bold mb-3">Ωράριο</h3>
-      <p class="text-sm flex items-center justify-center sm:justify-start gap-2">
-        <svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <polyline points="12 6 12 12 16 14" /> </svg>
-        Ανοιχτά 24/7 — κάθε μέρα
-      </p>
+      <h3 class="text-white font-bold mb-4">Ωράριο</h3>
+      <p class="text-sm inline-flex items-center gap-2"><svg aria-hidden="true" class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Ανοιχτά 24/7, κάθε μέρα</p>
     </div>
-
   </div>
-  <div class="text-center text-xs text-gray-500 mt-8">
+  <div class="max-w-6xl mx-auto border-t border-white/10 mt-10 pt-6 text-center text-xs text-gray-500">
     © <span id="current-year">2026</span> Ydrokalergakis.gr. Όλα τα δικαιώματα διατηρούνται. Κατασκευή ιστοσελίδας: <a href="https://quicksite.gr" target="_blank" rel="noopener" class="hover:text-white">quicksite.gr</a>
   </div>
 </footer>
+
+<!-- ΜΠΑΡΑ ΚΛΗΣΗΣ (κινητό) -->
+<div class="md:hidden fixed bottom-0 inset-x-0 z-[60] border-t border-gray-200 bg-white/90 backdrop-blur-xl px-3 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))]">
+  <div class="grid grid-cols-[1fr_auto] gap-2">
+    <a href="tel:+306951089108" class="flex items-center justify-center gap-2 rounded-full bg-blue-700 active:scale-95 transition text-white font-bold py-3 shadow-lg shadow-blue-700/25"><svg aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Κλήση τώρα</a>
+    <a href="mailto:ydrokalergakis@gmail.com" aria-label="Email" class="flex items-center justify-center rounded-full bg-gray-100 active:scale-95 transition text-gray-700 w-12"><svg aria-hidden="true" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+  </div>
+</div>
 
 <script>
   document.getElementById('current-year').textContent = new Date().getFullYear();
