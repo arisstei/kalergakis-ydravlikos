@@ -7,3 +7,7 @@ tailwind.config.js
 .gitignore
 .git
 node_modules
+package.json
+package-lock.json
+fotos-videos
+easy pipe fix
