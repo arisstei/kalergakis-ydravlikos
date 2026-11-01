@@ -44,6 +44,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/css/fx.css">
+<link rel="stylesheet" href="/css/consent.css">
 <style>
   html { scroll-behavior: smooth; }
   body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
@@ -56,6 +57,20 @@
     .rise-2 { animation-delay: .08s; } .rise-3 { animation-delay: .16s; } .rise-4 { animation-delay: .24s; }
   }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4V22Z9YX6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied',
+    'analytics_storage': 'denied', 'wait_for_update': 500
+  });
+  try { if (localStorage.getItem('cookie-consent') === 'granted') gtag('consent', 'update', {'analytics_storage': 'granted'}); } catch (e) {}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4V22Z9YX6');
+</script>
 </head>
 <body class="bg-white text-gray-800 pb-20 md:pb-0">
 
@@ -249,7 +264,7 @@
     </div>
   </div>
   <div class="max-w-6xl mx-auto border-t border-white/10 mt-10 pt-6 text-center text-xs text-gray-500">
-    © <span id="current-year">2026</span> Ydrokalergakis.gr. Όλα τα δικαιώματα διατηρούνται. Κατασκευή ιστοσελίδας: <a href="https://quicksite.gr" target="_blank" rel="noopener" class="hover:text-white">quicksite.gr</a>
+    © <span id="current-year">2026</span> Ydrokalergakis.gr. Όλα τα δικαιώματα διατηρούνται. <a href="/politiki-aporritou/" class="hover:text-white underline">Πολιτική απορρήτου</a> · <button type="button" data-cookie-settings class="cc-link">Ρυθμίσεις cookies</button>. Κατασκευή ιστοσελίδας: <a href="https://quicksite.gr" target="_blank" rel="noopener" class="hover:text-white">quicksite.gr</a>
   </div>
 </footer>
 
@@ -280,6 +295,7 @@
 <script src="/js/ScrollTrigger.min.js"></script>
 <script src="/js/lenis.min.js"></script>
 <script src="/js/fx.js" defer></script>
+<script src="/js/consent.js" defer></script>
 <script>
   document.getElementById('current-year').textContent = new Date().getFullYear();
 

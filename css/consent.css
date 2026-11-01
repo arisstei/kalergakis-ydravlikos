@@ -1,0 +1,14 @@
+/* Cookie consent banner */
+#cc-banner{position:fixed;left:0;right:0;bottom:0;z-index:90;padding:.75rem;display:none}
+#cc-banner.cc-show{display:block}
+#cc-banner .cc-box{max-width:56rem;margin:0 auto;background:#fff;border:1px solid #e5e7eb;border-radius:1.25rem;box-shadow:0 20px 50px -12px rgba(15,23,42,.35);padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.9rem;color:#374151;font-size:.9rem;line-height:1.5}
+#cc-banner .cc-title{font-weight:700;color:#111827;margin-bottom:.15rem}
+#cc-banner a{color:#1d4ed8;text-decoration:underline}
+#cc-banner .cc-actions{display:flex;gap:.6rem;flex-wrap:wrap}
+#cc-banner button{flex:1 1 9rem;border-radius:9999px;padding:.7rem 1.2rem;font-weight:700;font-size:.95rem;cursor:pointer;border:2px solid #1d4ed8;transition:transform .15s}
+#cc-banner button:active{transform:scale(.97)}
+#cc-banner .cc-accept{background:#1d4ed8;color:#fff}
+#cc-banner .cc-reject{background:#fff;color:#1d4ed8}
+@media (min-width:640px){#cc-banner .cc-box{flex-direction:row;align-items:center;justify-content:space-between}#cc-banner .cc-actions{flex-wrap:nowrap;flex:0 0 auto}#cc-banner button{flex:0 0 auto}}
+.cc-link{background:none;border:0;padding:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
+.cc-link:hover{color:#fff}
