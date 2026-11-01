@@ -12,3 +12,5 @@
 @media (min-width:640px){#cc-banner .cc-box{flex-direction:row;align-items:center;justify-content:space-between}#cc-banner .cc-actions{flex-wrap:nowrap;flex:0 0 auto}#cc-banner button{flex:0 0 auto}}
 .cc-link{background:none;border:0;padding:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
 .cc-link:hover{color:#fff}
+
+@media (max-width:639px){#cc-banner{padding:.5rem}#cc-banner .cc-box{padding:.75rem .85rem;gap:.6rem;font-size:.85rem;line-height:1.4;border-radius:1rem}#cc-banner button{flex:1 1 0;padding:.55rem .8rem;font-size:.9rem}}

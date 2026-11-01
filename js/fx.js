@@ -56,8 +56,7 @@
     var heroBits = $$('.lg\\:text-left > p, .lg\\:text-left > a', hero);
     gsap.set(heroBits, { y: 28, opacity: 0 });
     var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-    tl.from($('span.inline-block', hero), { y: -20, opacity: 0, duration: 0.6 })
-      .from($$('.fx-word>span', hero), { yPercent: 115, rotate: 4, duration: 0.9, stagger: 0.12 }, '-=0.3')
+    tl.from($$('.fx-word>span', hero), { yPercent: 115, rotate: 4, duration: 0.9, stagger: 0.12 })
       .to(heroBits, { y: 0, opacity: 1, duration: 0.7, stagger: 0.12 }, '-=0.5');
 
     var img = $('img', hero);
@@ -69,7 +68,7 @@
         var d = document.createElement('div'); d.className = 'fx-badge'; d.style.cssText = css; d.innerHTML = html; wrap.appendChild(d); return d;
       };
       var b1 = mk('<span class="dot"></span><span><b>Διαθέσιμος 24/7</b><small>Άμεση ανταπόκριση</small></span>', 'left:-.5rem;bottom:1.5rem');
-      var b2 = mk('<span style="font-size:1.4rem">📍</span><span><b>Ηράκλειο &amp; όλη η Κρήτη</b><small>Επαγγελματική εξυπηρέτηση</small></span>', 'right:-.5rem;top:1.5rem');
+      var b2 = mk('<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Ηράκλειο &amp; όλη η Κρήτη</b><small>Επαγγελματική εξυπηρέτηση</small></span>', 'right:-.5rem;top:1.5rem');
       tl.from([b1, b2], { scale: 0.6, opacity: 0, y: 20, duration: 0.7, stagger: 0.18, ease: 'back.out(1.8)' }, '-=0.4');
       gsap.to(b1, { y: -10, duration: 2.6, repeat: -1, yoyo: true, ease: 'sine.inOut' });
       gsap.to(b2, { y: 10, duration: 3.1, repeat: -1, yoyo: true, ease: 'sine.inOut' });
@@ -178,7 +177,7 @@
         ih1.setAttribute('aria-label', iw.join(' '));
         gsap.from($$('.fx-word>span', ih1), { yPercent: 115, rotate: 4, duration: 0.9, stagger: 0.1, delay: 0.15, ease: 'power3.out' });
       }
-      var card = $('.hidden.lg\:block > div', ihero);
+      var card = $('.hidden.lg\\:block > div', ihero);
       if (card) gsap.to(card, { y: -10, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut' });
     }
 
