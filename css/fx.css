@@ -49,3 +49,4 @@ html.lenis body {
 
 html.lenis,html.lenis-smooth{scroll-behavior:auto !important}
 @media (min-width:1024px){#services .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+#lightbox iframe{pointer-events:auto !important}
